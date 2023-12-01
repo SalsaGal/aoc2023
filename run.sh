@@ -1,5 +1,7 @@
 #!/bin/bash
 
+stylish-haskell -i **/*.hs
+
 if [[ $1 -eq 0 ]]; then
   target=$(ls -t | grep "[0-9]" | head -n1)
 else

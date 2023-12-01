@@ -1,7 +1,7 @@
 module Main where
 
-import Data.Functor
-import Data.Char
+import           Data.Char
+import           Data.Functor
 
 solve :: String -> Int
 solve = sum . map (read . (\x -> head x : [last x]) . filter isDigit) . lines

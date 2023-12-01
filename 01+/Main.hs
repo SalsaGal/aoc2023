@@ -1,23 +1,23 @@
 module Main where
-import Data.List
-import Data.Maybe
-import Control.Applicative
+import           Control.Applicative
+import           Data.List
+import           Data.Maybe
 
 numbers :: [String]
 numbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
   ++ [show x | x <- [1..9]]
 
 numbersClean :: String -> Char
-numbersClean "one" = '1'
-numbersClean "two" = '2'
+numbersClean "one"   = '1'
+numbersClean "two"   = '2'
 numbersClean "three" = '3'
-numbersClean "four" = '4'
-numbersClean "five" = '5'
-numbersClean "six" = '6'
+numbersClean "four"  = '4'
+numbersClean "five"  = '5'
+numbersClean "six"   = '6'
 numbersClean "seven" = '7'
 numbersClean "eight" = '8'
-numbersClean "nine" = '9'
-numbersClean x = head x
+numbersClean "nine"  = '9'
+numbersClean x       = head x
 
 getPrefix :: String -> String -> Maybe String
 getPrefix xs ys
