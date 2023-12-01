@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ $1 -eq 0 ]]; then
-  target=$(ls -t | grep "[0-9]")
+  target=$(ls -t | grep "[0-9]" | head -n1)
 else
   target=$1
 fi
