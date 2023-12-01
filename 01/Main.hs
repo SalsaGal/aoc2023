@@ -8,5 +8,5 @@ solve = sum . map (read . (\x -> head x : [last x]) . filter isDigit) . lines
 
 main :: IO ()
 main = do
-  readFile "01/test.txt" >>= print . solve
-  readFile "01/input.txt" >>= print . solve
+  readFile "test.txt" >>= print . solve
+  readFile "input.txt" >>= print . solve

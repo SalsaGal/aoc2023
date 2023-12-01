@@ -1,10 +1,18 @@
-#!/bin/zsh
+#!/bin/bash
 
-if (( ${1} )); then
-  target=$1
-else
+if [[ $1 -eq 0 ]]; then
   target=$(ls -t | grep "[0-9]")
+else
+  target=$1
+fi
+
+echo "Target: $target"
+
+if [[ ! -d "bin" ]]; then
+  echo "Making bin"
+  mkdir bin
 fi
 
 ghc $target/Main.hs -o bin/$target -outputdir bin
-bin/$target
+cd $target
+../bin/$target
