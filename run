@@ -1,0 +1,9 @@
+[default]
+ghc 01/Main.hs -o bin/01 -outputdir bin
+bin/01
+
+[default:build]
+ghc 01/Main.hs -o bin/01 -outputdir bin
+
+[clean]
+rm bin/*
